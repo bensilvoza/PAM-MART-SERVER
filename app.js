@@ -6,6 +6,9 @@ require("dotenv").config();
 
 // require routes
 const home = require("./routes/customer/home");
+const register = require("./routes/customer/register");
+const login = require("./routes/customer/login");
+const product = require("./routes/customer/product");
 // administrator routes
 const administratorProductCreate = require("./routes/administrator/product/create");
 
@@ -24,6 +27,9 @@ connection.once("open", function () {
 
 // routes
 app.use(home);
+app.use(register);
+app.use(login);
+app.use(product);
 // administrator
 app.use(administratorProductCreate);
 
