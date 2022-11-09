@@ -9,6 +9,7 @@ const home = require("./routes/customer/home");
 const register = require("./routes/customer/register");
 const login = require("./routes/customer/login");
 const product = require("./routes/customer/product");
+const payment = require("./routes/customer/payment");
 // administrator routes
 const administratorProductCreate = require("./routes/administrator/product/create");
 
@@ -30,6 +31,7 @@ app.use(home);
 app.use(register);
 app.use(login);
 app.use(product);
+app.use(payment);
 // administrator
 app.use(administratorProductCreate);
 
