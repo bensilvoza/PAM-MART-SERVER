@@ -10,6 +10,7 @@ const register = require("./routes/customer/register");
 const login = require("./routes/customer/login");
 const product = require("./routes/customer/product");
 const payment = require("./routes/customer/payment");
+const order = require("./routes/customer/order");
 // administrator routes
 const administratorProductCreate = require("./routes/administrator/product/create");
 
@@ -32,6 +33,7 @@ app.use(register);
 app.use(login);
 app.use(product);
 app.use(payment);
+app.use(order);
 // administrator
 app.use(administratorProductCreate);
 
