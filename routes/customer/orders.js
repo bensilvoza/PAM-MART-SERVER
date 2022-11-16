@@ -3,8 +3,8 @@ const express = require("express");
 const router = express.Router();
 
 // controllers
-let { order } = require("../../controllers/customer/order");
+let { orders } = require("../../controllers/customer/orders");
 
-router.post("/order", order);
+router.post("/orders", orders);
 
 module.exports = router;
