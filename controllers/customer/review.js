@@ -50,6 +50,32 @@ async function review(req, res) {
     }
   }
 
+  // editReview method
+  if (req.body.method === "editReview") {
+    // edit dbResponse.review
+    dbResponse.review = req.body.review;
+
+    await Review.findOneAndUpdate(
+      { productId: req.body.productId },
+      dbResponse
+    );
+
+    return;
+  }
+
+  // editReview method
+  if (req.body.method === "deleteReview") {
+    // edit dbResponse.review
+    dbResponse.review = req.body.review;
+
+    await Review.findOneAndUpdate(
+      { productId: req.body.productId },
+      dbResponse
+    );
+
+    return;
+  }
+
   // add applaud/like to a review
   if (req.body.method === "addReviewLike") {
     // check if reviewLikerName is already present on the list
